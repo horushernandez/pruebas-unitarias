@@ -24,3 +24,6 @@ jobs:
 
           - name: Build with dotnet
             run: dotnet build --configuration ${{env.BUILD_CONFIGURATION}}
+
+          - name: Test
+            run: dotnet test --configuration ${{env.BUILD_CONFIGURATION}}
