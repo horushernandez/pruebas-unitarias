@@ -41,4 +41,40 @@ public class OperacionesMatematicasTest
         //Assert
         Assert.Equal(0, resultado);
     }
+
+    [Fact]
+    public void Restar_DosPositivos_ValorCorrecto()
+    {
+        //Arrage
+        var a = 5;
+        var b = 3;
+        //Act
+        var resultado = _operacionesMatematicas.Restar(a, b);
+        //Assert
+        Assert.Equal(2, resultado);
+    }
+
+    [Fact]
+    public void Restar_NegativoMenosPositivo_ValorCorrecto()
+    {
+        //Arrage
+        var a = -5;
+        var b = 3;
+        //Act
+        var resultado = _operacionesMatematicas.Restar(a, b);
+        //Assert
+        Assert.Equal(-8, resultado);
+    }
+
+    [Fact]
+    public void Restar_CeroMenosCero_RetornaCero()
+    {
+        //Arrage
+        var a = 0;
+        var b = 0;
+        //Act
+        var resultado = _operacionesMatematicas.Restar(a, b);
+        //Assert
+        Assert.Equal(0, resultado);
+    }
 }
